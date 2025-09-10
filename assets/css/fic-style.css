@@ -1,155 +1,146 @@
-/* ---------------------------
-   FIC Global Theme Overrides
-----------------------------*/
+/* ===============================
+   FIC Full Color Theme Overrides
+   For Editorial Template
+   =============================== */
 
-/* Define primary colors */
+/* Root Colors */
 :root {
-    --primary-color: #003366;      /* Deep Blue */
-    --secondary-color: #0073e6;    /* Lighter Blue */
-    --accent-color: #ffcc00;       /* Gold/Accent */
-    --background-color: #f5f5f5;   /* Light Gray */
-    --text-color: #333333;         /* Standard Text */
+    --primary-color: #1a5a3f; /* FIC green */
+    --secondary-color: #f0f0f0; /* light gray backgrounds */
+    --accent-color: #007a4d; /* darker green for hover states */
+    --text-color: #333333; /* main text color */
+    --header-text-color: #ffffff; /* text in header/footer */
 }
 
-/* Body */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/* Header and logo */
-#header, #main header a.logo {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-#header nav ul li a,
-#sidebar ul li a {
+/* Global Text */
+body, h1, h2, h3, h4, h5, h6, p {
     color: var(--text-color);
 }
 
-#header nav ul li a.active,
-#sidebar ul li a.active {
+/* Buttons */
+.button, .button.big {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+}
+
+.button:hover, .button.big:hover {
+    background-color: var(--accent-color);
+}
+
+/* Links */
+a {
     color: var(--primary-color);
-    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Header */
+#header {
+    background-color: var(--primary-color);
+}
+
+#header a.logo {
+    color: var(--header-text-color);
+}
+
+#header ul.icons li a {
+    color: var(--header-text-color);
+}
+
+/* Banner */
+#banner .content header h1,
+#banner .content header p {
+    color: var(--primary-color);
+}
+
+/* Main Sections */
+section {
+    background-color: var(--secondary-color);
+}
+
+/* Section Headers */
+header.major h2 {
+    color: var(--primary-color);
+}
+
+/* Features */
+.features article .icon {
+    color: var(--primary-color);
 }
 
 /* Sidebar */
 #sidebar {
     background-color: #ffffff;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid #cccccc;
 }
 
-/* Section headers */
-h2, h3 {
+#sidebar ul li a {
     color: var(--primary-color);
-    font-weight: bold;
 }
 
-/* Paragraphs */
-p {
-    line-height: 1.6em;
+#sidebar ul li a:hover {
+    color: var(--accent-color);
 }
 
-/* Buttons */
-.actions .button,
-ul.actions li a.button {
-    background-color: var(--primary-color);
-    color: #ffffff;
-    border-radius: 5px;
-    padding: 0.7em 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+#sidebar section#search input[type="text"] {
+    border: 1px solid #cccccc;
+    color: var(--text-color);
 }
 
-.actions .button:hover,
-ul.actions li a.button:hover {
-    background-color: var(--secondary-color);
-    color: #ffffff;
-}
-
-/* Links */
-a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-/* Forms */
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form textarea,
-form select {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0.6em;
-    width: 100%;
-    margin-bottom: 1em;
-    box-sizing: border-box;
-}
-
-form label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 0.3em;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 980px) {
-    body {
-        font-size: 0.95em;
-    }
-
-    #sidebar {
-        border-left: none;
-        border-top: 1px solid #ddd;
-    }
+/* Sidebar Mini-Posts */
+.mini-posts article p {
+    color: var(--text-color);
 }
 
 /* Footer */
-#footer, #footer p {
-    color: var(--text-color);
-    background-color: #ffffff;
-    font-size: 0.9em;
-}
-
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1em;
-}
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 0.6em;
-    text-align: left;
-}
-table th {
+#footer {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--header-text-color);
+    border-top: 3px solid var(--accent-color);
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+#footer a {
+    color: var(--header-text-color);
 }
 
-/* Ensure actions/buttons stack on mobile */
-.actions.stacked li {
-    margin-bottom: 0.7em;
-}
-
-/* Optional accents */
-.highlight {
+#footer a:hover {
     color: var(--accent-color);
-    font-weight: bold;
+}
+
+/* Miscellaneous */
+.wrapper.special {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2em;
+}
+
+ul.actions li a.primary {
+    background-color: var(--primary-color);
+}
+
+ul.actions li a.primary:hover {
+    background-color: var(--accent-color);
+}
+
+/* Forms (for registration/reporting) */
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+    border: 1px solid #cccccc;
+    padding: 0.5em;
+    color: var(--text-color);
+}
+
+form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--accent-color);
 }
