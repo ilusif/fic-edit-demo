@@ -1,13 +1,13 @@
 /* ===============================
-   FIC Full Color Theme Overrides
+   FIC Blue Theme Overrides
    For Editorial Template
    =============================== */
 
 /* Root Colors */
 :root {
-    --primary-color: #1a5a3f; /* FIC green */
+    --primary-color: #0056b3; /* Blue for main elements */
     --secondary-color: #f0f0f0; /* light gray backgrounds */
-    --accent-color: #007a4d; /* darker green for hover states */
+    --accent-color: #003d80; /* Darker blue for hover states */
     --text-color: #333333; /* main text color */
     --header-text-color: #ffffff; /* text in header/footer */
 }
@@ -55,6 +55,25 @@ a:hover {
 #banner .content header h1,
 #banner .content header p {
     color: var(--primary-color);
+}
+
+/* Banner Video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Main Sections */
